@@ -1,0 +1,61 @@
+table   {
+
+border-collapse:collapse;
+
+border:2px solid red;
+
+
+
+align:right;
+
+float:left;
+
+font-family:Arial,"sans-serif";
+
+color:black;
+
+font-weight:bold;
+
+font-style:normal;
+
+text-align:left;
+
+font-size:14px;
+
+}
+
+th, td {
+  border: 1px solid black;
+}
+
+h1   {
+
+font-family:"Trebuchet MS",Arial,"sans-serif";
+
+font-size:36px;
+
+color:Navy;
+
+font-style:normal;
+
+font-weight:bold;
+
+text-align:left;
+
+}
+
+h2  {
+
+font-family:"Trebuchet MS",Arial,"sans-serif";
+
+font-size:17px;
+
+color:Navy;
+
+font-style:normal;
+
+font-weight:bold;
+
+text-align:left;
+
+}
