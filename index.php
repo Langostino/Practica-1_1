@@ -3,7 +3,7 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html style="font-family:Arial">
 	<head>
 		<title>Desarrollo de interfaces</title>
 		<link rel="stylesheet" href="css/index.css">
@@ -36,24 +36,31 @@
 
 		<form method="post" name="formulario" action ="form.php">
 			<h2>Insertar Ciudad</h2>
-			ID:
-		  <input type="text" name="c_id"><br>
-		  Nombre:
-		  <input type="text" name="c_name"><br>
-		  Country Code: 
-		  <input type="text" name="c_code"><br>
-		  Population: 
-		  <input type="text" name="c_pop"><br>
-		  District: 
-		  <input type="text" name="c_dis"><br><br>
-		  <input type="submit" value="Insertar" name="submit">
+			Nombre:<br>
+			<input type="text" name="c_name"><br>
+			Country Code: <br>
+			<select name="c_code" class="hola">
+				<?php
+				try{
+					$i=1;
+					$stmt = $dbh->query("SELECT DISTINCT CountryCode FROM city");
+					while($rows = $stmt->fetch())
+						echo "<option value=".$rows[0].">".$rows[0]."</option>";
+					}catch(PDOException $e){
+					echo "Error".$e->getMessage();
+					}
+				?>
+			</select><br>
+			Population: <br>
+			<input type="text" name="c_pop"><br>
+			District: <br>
+			<input type="text" name="c_dis"><br><br>
+			<input type="submit" value="Insertar" name="insertar">
 		</form>
 
-
-
-
+		<form method="post" name="formulario2" action="form.php"> 
+			Enter a number: <input type="text" name="number" size="3"> <br>
+			<input type="submit" value="Eliminar" name="eliminar">
+		</form>
 	</body>
 </html>
-
-
-
