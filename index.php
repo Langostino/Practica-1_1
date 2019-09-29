@@ -9,6 +9,11 @@
 		<link rel="stylesheet" href="css/index.css">
 	</head>
 	<body>
+		<script>
+			function hola(){
+				return confirm("Está seguro de que desea eliminar?");
+				}
+		</script>
 				<?php 								/*
 		try{
 
@@ -55,12 +60,12 @@
 			<input type="text" name="c_pop"><br>
 			District: <br>
 			<input type="text" name="c_dis"><br><br>
-			<input type="submit" value="Insertar" name="insertar">
+			<button id="btn1" name="insertar" type="submit" value="HTML">Insertar</button>
 		</form>
 
 		<form method="post" name="formulario2" action="form.php"> 
-			Enter a number: <input type="text" name="number" size="3"> <br>
-			<input type="submit" value="Eliminar" name="eliminar">
+			ID: <input type="text" name="c_id" size="3"> <br>
+			<button id="btn2" onclick="hola()" name="eliminar" type="submit" value="HTML">Eliminar</button>
 		</form>
 	</body>
 </html>
